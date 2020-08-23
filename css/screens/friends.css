@@ -1,0 +1,77 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: -15px;
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.friends-screen__friends {
+  margin-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 15px;
+}
+
+.friends-screen__friends-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.friends-screen__friends .user-component {
+  margin-bottom: 20px;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinLoading {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(720deg);
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: hideSplashScreen 0.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+#splash-screen i:first-child {
+  font-size: 132px;
+  margin-bottom: 40px;
+}
+
+#splash-screen i:last-child {
+  font-size: 40px;
+  animation: spinLoading 2s ease-in-out;
+}
